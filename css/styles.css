@@ -1,1 +1,45 @@
 /* styles */
+body{
+	width:60%;
+	margin:30px auto;
+}
+h2{
+	font-family:arial,helvetica,sans-serif;
+	font-size:21px;
+	line-height:33px;
+	border-bottom:1px solid rgba(0,0,0,.6);
+	padding-bottom:20px;
+	margin-bottom:0px;
+	text-transform: uppercase;
+	text-shadow: 0 0 0 #333;
+}
+#uni-list,
+#uni-list li{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#uni-list li{
+	border-bottom:1px solid rgba(0,0,0,.1);
+	padding:4px 0 4px 12px;
+	cursor:pointer;
+}
+#uni-list li:nth-child(even){
+	background:#efefef;
+}
+#uni-list li a{
+	color:#474747;
+	text-decoration: none;
+	-moz-transition:color .3s ease;
+	-webkit-transition:color .3s ease;
+	transition:color .3s ease;
+}
+#uni-list li a:hover,
+#uni-list li:hover a{
+	color:magenta;
+}
+#uni-list li a h3{
+	font-family:georgia,"times new roman",serif;
+	font-size:14px;
+	line-height:21px;
+}
