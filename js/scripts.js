@@ -10,6 +10,7 @@ $(document).ready(function(){
 	      var arr = createUniArray(data);
 	      var abcArr = sortArr(arr);
 	      putOnPage(abcArr);
+	      runSearch();
 	    }
     });
 
@@ -44,7 +45,7 @@ $(document).ready(function(){
 	function putOnPage(arr){
 
 		//define underscore template
-		var listItemTemplate = _.template("<li><a href='<%= url %>'><h3><%= name %> &raquo;</h3></a></li>");
+		var listItemTemplate = _.template("<li><a target='_blank' href='<%= url %>'><h3><%= name %> &raquo;</h3></a></li>");
 
 		_.each(arr,function(uni,index){
 			//pass object to list item template
@@ -55,6 +56,21 @@ $(document).ready(function(){
 		});
 
 	}
+
+	//after everything is on the page
+	function runSearch(){
+
+		var rows = $('#uni-list li');
+		$('#search-box').keyup(function(){
+			var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+			rows.show().filter(function(){
+				var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+				return !~text.indexOf(val);
+			}).hide();
+		});
+
+	}	
 
 
 });

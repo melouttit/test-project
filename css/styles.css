@@ -2,6 +2,7 @@
 body{
 	width:60%;
 	margin:30px auto;
+	position:relative;
 }
 h2{
 	font-family:arial,helvetica,sans-serif;
@@ -12,6 +13,19 @@ h2{
 	margin-bottom:0px;
 	text-transform: uppercase;
 	text-shadow: 0 0 0 #333;
+}
+figure{
+	margin: 6px 0 0 0;
+  	position: absolute;
+  	right: 0px;
+  	top: 0;
+}
+figure span{
+	font-family: arial,sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    vertical-align: bottom;
 }
 #uni-list,
 #uni-list li{
